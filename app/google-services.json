@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "179751294138",
+    "project_id": "garage-vgo",
+    "storage_bucket": "garage-vgo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:179751294138:android:8f96e1c2e437251653de83",
+        "android_client_info": {
+          "package_name": "com.example.garage_vgo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "179751294138-dnibq3l16s3ds8l0g75kq8unb6n0kpri.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2QlhzLK73ta1r1CHV4xs8Thv3X0GTs4k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "179751294138-dnibq3l16s3ds8l0g75kq8unb6n0kpri.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
