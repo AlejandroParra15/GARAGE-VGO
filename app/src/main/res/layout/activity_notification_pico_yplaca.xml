@@ -4,180 +4,201 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#2C699A"
+    android:background="@drawable/imgsoimte"
     tools:context=".ActivityNotificationPicoYPlaca">
 
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="253dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="34dp"
-        android:layout_marginEnd="30dp"
-        android:text="Nombre del item a completar"
-        android:textColor="#FFFFFF"
-        android:textSize="18dp"
-        android:textStyle="bold"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#B02C699A"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="Seleccione el dia de pico y placa"
-        android:textColor="#B9E769"
-        app:layout_constraintEnd_toEndOf="@+id/spinnerPicoyPlaca"
-        app:layout_constraintStart_toStartOf="@+id/spinnerPicoyPlaca"
-        app:layout_constraintTop_toBottomOf="@+id/etCiudad" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#80000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
 
-    <TextView
-        android:id="@+id/textView15"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="Seleccione el vehiculo"
-        android:textColor="#B9E769"
-        app:layout_constraintEnd_toEndOf="@+id/spinnerVehiculoPico"
-        app:layout_constraintStart_toStartOf="@+id/spinnerVehiculoPico"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerPicoyPlaca" />
+            <Button
+                android:id="@+id/btCancelarPico"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="#FFFFFF"
+                android:text="CANCELAR"
+                android:textColor="#173B57"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/btEnviarPico"
+                app:layout_constraintStart_toStartOf="@+id/btEnviarPico"
+                app:layout_constraintTop_toBottomOf="@+id/btEnviarPico" />
 
-    <EditText
-        android:id="@+id/etCiudad"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#B9E769"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="@+id/textView10"
-        app:layout_constraintStart_toStartOf="@+id/textView10"
-        app:layout_constraintTop_toBottomOf="@+id/textView14"
-        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+            <Button
+                android:id="@+id/btEnviarPico"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#B9E769"
+                android:text="ENVIAR"
+                android:textColor="#173B57"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/checkBox7"
+                app:layout_constraintStart_toStartOf="@+id/textView13"
+                app:layout_constraintTop_toBottomOf="@+id/checkBox7" />
 
-    <TextView
-        android:id="@+id/textView14"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Ciudad"
-        android:textColor="#B9E769"
-        app:layout_constraintEnd_toEndOf="@+id/etCiudad"
-        app:layout_constraintStart_toStartOf="@+id/etCiudad"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+            <CheckBox
+                android:id="@+id/checkBox5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:buttonTint="#B9E769"
+                android:text="1 dia antes de la fecha"
+                android:textColor="#EFEDED"
+                app:layout_constraintEnd_toEndOf="@+id/checkBox4"
+                app:layout_constraintStart_toStartOf="@+id/checkBox4"
+                app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
 
-    <Spinner
-        android:id="@+id/spinnerPicoyPlaca"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#B9E769"
-        android:minWidth="30dp"
-        android:minHeight="48dp"
-        android:textAlignment="textStart"
-        app:layout_constraintEnd_toEndOf="@+id/etCiudad"
-        app:layout_constraintStart_toStartOf="@+id/etCiudad"
-        app:layout_constraintTop_toBottomOf="@+id/textView11"
-        tools:ignore="SpeakableTextPresentCheck" />
+            <CheckBox
+                android:id="@+id/checkBox6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:buttonTint="#B9E769"
+                android:text="15 dias antes de la fecha"
+                android:textColor="#EFEDED"
+                app:layout_constraintEnd_toEndOf="@+id/checkBox5"
+                app:layout_constraintStart_toStartOf="@+id/checkBox5"
+                app:layout_constraintTop_toBottomOf="@+id/checkBox5" />
 
-    <Spinner
-        android:id="@+id/spinnerVehiculoPico"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#B9E769"
-        android:minWidth="30dp"
-        android:minHeight="48dp"
-        android:textAlignment="textStart"
-        app:layout_constraintEnd_toEndOf="@+id/spinnerPicoyPlaca"
-        app:layout_constraintStart_toStartOf="@+id/spinnerPicoyPlaca"
-        app:layout_constraintTop_toBottomOf="@+id/textView15"
-        tools:ignore="SpeakableTextPresentCheck" />
+            <CheckBox
+                android:id="@+id/checkBox7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:buttonTint="#B9E769"
+                android:text="15 dias antes de la fecha"
+                android:textColor="#EFEDED"
+                app:layout_constraintEnd_toEndOf="@+id/checkBox6"
+                app:layout_constraintStart_toStartOf="@+id/checkBox6"
+                app:layout_constraintTop_toBottomOf="@+id/checkBox6" />
 
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="Cuando desea que sea notificado?"
-        android:textColor="#B9E769"
-        app:layout_constraintEnd_toEndOf="@+id/checkBox4"
-        app:layout_constraintStart_toStartOf="@+id/checkBox4"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerVehiculoPico" />
+            <CheckBox
+                android:id="@+id/checkBox4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:buttonTint="#B9E769"
+                android:text="1 mes antes de la fecha"
+                android:textColor="#EFEDED"
+                app:layout_constraintEnd_toEndOf="@+id/textView13"
+                app:layout_constraintStart_toStartOf="@+id/textView13"
+                app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
-    <CheckBox
-        android:id="@+id/checkBox4"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:buttonTint="#B9E769"
-        android:text="1 mes antes de la fecha"
-        android:textColor="#EFEDED"
-        app:layout_constraintEnd_toEndOf="@+id/spinnerVehiculoPico"
-        app:layout_constraintStart_toStartOf="@+id/spinnerVehiculoPico"
-        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Cuando desea que sea notificado?"
+                android:textColor="#B9E769"
+                app:layout_constraintEnd_toEndOf="@+id/spinnerVehiculoPico"
+                app:layout_constraintStart_toStartOf="@+id/spinnerVehiculoPico"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerVehiculoPico" />
 
-    <CheckBox
-        android:id="@+id/checkBox7"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:buttonTint="#B9E769"
-        android:text="15 dias antes de la fecha"
-        android:textColor="#EFEDED"
-        app:layout_constraintEnd_toEndOf="@+id/checkBox6"
-        app:layout_constraintStart_toStartOf="@+id/checkBox6"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox6" />
+            <Spinner
+                android:id="@+id/spinnerVehiculoPico"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#B9E769"
+                android:minWidth="30dp"
+                android:minHeight="48dp"
+                android:textAlignment="textStart"
+                app:layout_constraintEnd_toEndOf="@+id/spinnerPicoyPlaca"
+                app:layout_constraintStart_toStartOf="@+id/spinnerPicoyPlaca"
+                app:layout_constraintTop_toBottomOf="@+id/textView15"
+                tools:ignore="SpeakableTextPresentCheck" />
 
-    <CheckBox
-        android:id="@+id/checkBox6"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:buttonTint="#B9E769"
-        android:text="15 dias antes de la fecha"
-        android:textColor="#EFEDED"
-        app:layout_constraintEnd_toEndOf="@+id/checkBox5"
-        app:layout_constraintStart_toStartOf="@+id/checkBox5"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox5" />
+            <Spinner
+                android:id="@+id/spinnerPicoyPlaca"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#B9E769"
+                android:minWidth="30dp"
+                android:minHeight="48dp"
+                android:textAlignment="textStart"
+                app:layout_constraintEnd_toEndOf="@+id/etCiudad"
+                app:layout_constraintStart_toStartOf="@+id/etCiudad"
+                app:layout_constraintTop_toBottomOf="@+id/textView11"
+                tools:ignore="SpeakableTextPresentCheck" />
 
-    <CheckBox
-        android:id="@+id/checkBox5"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:buttonTint="#B9E769"
-        android:text="1 dia antes de la fecha"
-        android:textColor="#EFEDED"
-        app:layout_constraintEnd_toEndOf="@+id/checkBox4"
-        app:layout_constraintStart_toStartOf="@+id/checkBox4"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Ciudad"
+                android:textColor="#B9E769"
+                app:layout_constraintEnd_toEndOf="@+id/etCiudad"
+                app:layout_constraintStart_toStartOf="@+id/etCiudad"
+                app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
-    <Button
-        android:id="@+id/btEnviarPico"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="10dp"
-        android:backgroundTint="#B9E769"
-        android:text="ENVIAR"
-        android:textColor="#173B57"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/btCancelarPico"
-        app:layout_constraintStart_toStartOf="@+id/checkBox7"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox7" />
+            <EditText
+                android:id="@+id/etCiudad"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#B9E769"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#5CFFFFFF"
+                app:layout_constraintEnd_toEndOf="@+id/textView10"
+                app:layout_constraintStart_toStartOf="@+id/textView10"
+                app:layout_constraintTop_toBottomOf="@+id/textView14"
+                tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
-    <Button
-        android:id="@+id/btCancelarPico"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="141dp"
-        android:backgroundTint="#52040404"
-        android:text="CANCELAR"
-        android:textColor="#B9E769"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/checkBox7"
-        app:layout_constraintStart_toEndOf="@+id/btEnviarPico"
-        app:layout_constraintTop_toTopOf="@+id/btEnviarPico"
-        app:layout_constraintVertical_bias="0.289" />
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Seleccione el vehiculo"
+                android:textColor="#B9E769"
+                app:layout_constraintEnd_toEndOf="@+id/spinnerVehiculoPico"
+                app:layout_constraintStart_toStartOf="@+id/spinnerVehiculoPico"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerPicoyPlaca" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="60dp"
+                android:text="Nombre del item a completar"
+                android:textColor="#FFFFFF"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Seleccione el dia de pico y placa"
+                android:textColor="#B9E769"
+                app:layout_constraintEnd_toEndOf="@+id/spinnerPicoyPlaca"
+                app:layout_constraintStart_toStartOf="@+id/spinnerPicoyPlaca"
+                app:layout_constraintTop_toBottomOf="@+id/etCiudad" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

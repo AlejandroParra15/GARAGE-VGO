@@ -121,7 +121,7 @@
             <Button
                 android:id="@+id/saveCambioAceiteId"
                 android:layout_width="0dp"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:backgroundTint="#B9E769"
                 android:text="ENVIAR"
@@ -135,8 +135,8 @@
             <Button
                 android:id="@+id/cancelarId"
                 android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
                 android:layout_marginBottom="219dp"
                 android:backgroundTint="#FFFFFF"
                 android:text="CANCELAR"

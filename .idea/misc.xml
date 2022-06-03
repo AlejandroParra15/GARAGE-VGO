@@ -39,6 +39,8 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main2.xml" value="0.1598731884057971" />
         <entry key="app/src/main/res/layout/activity_navigation.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_notification_pico_yplaca.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_notification_soat_tecnico_impue.xml" value="0.15942028985507245" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.25285797119140624" />
         <entry key="app/src/main/res/layout/dialog_forgot_password.xml" value="0.27717391304347827" />
         <entry key="app/src/main/res/layout/fragment.xml" value="0.27717391304347827" />
