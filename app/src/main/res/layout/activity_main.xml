@@ -4,138 +4,148 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#2C699A"
+    android:background="@drawable/fondomain"
     tools:context=".MainActivity">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/ivProfileImage"
-        android:layout_width="172dp"
-        android:layout_height="162dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="30dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#B02C699A">
 
-        android:layout_marginEnd="40dp"
-        android:src="@drawable/user_icon"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="ImageContrastCheck" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#80000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/lbUser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:text="Usuario"
-        android:textColor="#B9E769"
-        app:layout_constraintEnd_toEndOf="@+id/etUser"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/etUser"
-        app:layout_constraintTop_toBottomOf="@+id/ivProfileImage" />
+            <EditText
+                android:id="@+id/etUser"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginEnd="60dp"
+                android:autofillHints=""
+                android:backgroundTint="#B9E769"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textColor="#FDFDFD"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lbUser"
+                tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
-    <TextView
-        android:id="@+id/tvForgotPassword"
-        android:layout_width="163dp"
-        android:layout_height="32dp"
-        android:layout_marginEnd="227dp"
-        android:gravity="center"
-        android:text="Recuperar contraseña?"
-        android:textAlignment="center"
-        android:textColor="#FBFBFB"
-        app:layout_constraintEnd_toEndOf="@+id/etPassword"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/etPassword"
-        app:layout_constraintTop_toBottomOf="@+id/etPassword" />
+            <Button
+                android:id="@+id/btGoogle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="@color/white"
+                android:drawableLeft="@drawable/google_2"
+                android:text="Continuar con Google"
+                android:textColor="#173B57"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/btLogIn"
+                app:layout_constraintStart_toStartOf="@+id/btLogIn"
+                app:layout_constraintTop_toBottomOf="@+id/btLogIn" />
 
-    <TextView
-        android:id="@+id/tvCreateAccount"
-        android:layout_width="148dp"
-        android:layout_height="36dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="81dp"
-        android:gravity="center"
-        android:text="CREAR UNA CUENTA"
-        android:textAlignment="center"
-        android:textColor="#E8E8E8"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/btGoogle"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="@+id/btGoogle"
-        app:layout_constraintTop_toBottomOf="@+id/btGoogle" />
+            <TextView
+                android:id="@+id/tvCreateAccount"
+                android:layout_width="148dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="79dp"
+                android:gravity="center"
+                android:text="CREAR UNA CUENTA"
+                android:textAlignment="center"
+                android:textColor="#E8E8E8"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/btGoogle"
+                app:layout_constraintStart_toStartOf="@+id/btGoogle"
+                app:layout_constraintTop_toBottomOf="@+id/btGoogle" />
 
-    <TextView
-        android:id="@+id/lbPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Ccontraseña"
-        android:textColor="#B9E769"
-        app:layout_constraintEnd_toEndOf="@+id/etPassword"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/etPassword"
-        app:layout_constraintTop_toBottomOf="@+id/etUser" />
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:autofillHints=""
+                android:backgroundTint="#B9E769"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:textColor="#FDFDFD"
+                app:layout_constraintEnd_toEndOf="@+id/etUser"
+                app:layout_constraintStart_toStartOf="@+id/etUser"
+                app:layout_constraintTop_toBottomOf="@+id/lbPassword"
+                tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
-    <EditText
-        android:id="@+id/etUser"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="40dp"
-        android:backgroundTint="#B9E769"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:textColor="#FDFDFD"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lbUser"
-        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck"
-        android:autofillHints="" />
+            <TextView
+                android:id="@+id/lbUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:text="Usuario"
+                android:textColor="#B9E769"
+                app:layout_constraintEnd_toEndOf="@+id/etUser"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/etUser"
+                app:layout_constraintTop_toBottomOf="@+id/ivProfileImage" />
 
-    <EditText
-        android:id="@+id/etPassword"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="5dp"
-        android:backgroundTint="#B9E769"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:textColor="#FDFDFD"
-        app:layout_constraintEnd_toEndOf="@+id/etUser"
-        app:layout_constraintStart_toStartOf="@+id/etUser"
-        app:layout_constraintTop_toBottomOf="@+id/lbPassword"
-        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck"
-        android:autofillHints="" />
+            <TextView
+                android:id="@+id/lbPassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Ccontraseña"
+                android:textColor="#B9E769"
+                app:layout_constraintEnd_toEndOf="@+id/etPassword"
+                app:layout_constraintStart_toStartOf="@+id/etPassword"
+                app:layout_constraintTop_toBottomOf="@+id/etUser" />
 
-    <Button
-        android:id="@+id/btLogIn"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:backgroundTint="#B9E769"
-        android:text="ENTRAR"
-        android:textColor="#173B57"
-        android:textStyle="bold"
-        app:cornerRadius="10dp"
-        app:layout_constraintEnd_toEndOf="@+id/etPassword"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/etPassword"
-        app:layout_constraintTop_toBottomOf="@+id/tvForgotPassword" />
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivProfileImage"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_marginStart="118dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="121dp"
+                android:src="@drawable/logomain3"
 
-    <Button
-        android:id="@+id/btGoogle"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:backgroundTint="@color/white"
-        android:drawableLeft="@drawable/google_2"
-        android:text="Continuar con Google"
-        android:textColor="#173B57"
-        android:textStyle="bold"
-        app:cornerRadius="10dp"
-        app:layout_constraintEnd_toEndOf="@+id/btLogIn"
-        app:layout_constraintStart_toStartOf="@+id/btLogIn"
-        app:layout_constraintTop_toBottomOf="@+id/btLogIn" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ImageContrastCheck" />
+
+            <TextView
+                android:id="@+id/tvForgotPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:text="Recuperar contraseña?"
+                android:textAlignment="center"
+                android:textColor="#FBFBFB"
+                app:layout_constraintEnd_toEndOf="@+id/etPassword"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/etPassword"
+                app:layout_constraintTop_toBottomOf="@+id/etPassword" />
+
+            <Button
+                android:id="@+id/btLogIn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="#B9E769"
+                android:text="ENTRAR"
+                android:textColor="#173B57"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/etPassword"
+                app:layout_constraintStart_toStartOf="@+id/etPassword"
+                app:layout_constraintTop_toBottomOf="@+id/tvForgotPassword" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
