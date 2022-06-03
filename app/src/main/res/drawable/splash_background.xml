@@ -2,7 +2,7 @@
 <layer-list android:opacity="opaque"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:drawable="@color/orange"/>
+    <item android:drawable="#048BA8"/>
 
     <item
         android:top="250dp"
@@ -10,7 +10,7 @@
         android:left="160dp"
         android:right="160dp">
 
-        <bitmap android:src="@drawable/logo"></bitmap>
+        <bitmap android:src="@drawable/logomain3"></bitmap>
 
     </item>
 
