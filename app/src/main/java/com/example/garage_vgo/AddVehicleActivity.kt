@@ -42,20 +42,30 @@ class AddVehicleActivity : AppCompatActivity(){
             }
         }
 
-        binding.tPropiedadId.setOnClickListener { goAddImage() }
-        binding.TecnicoMecId.setOnClickListener { goAddImage() }
-        binding.soatId.setOnClickListener { goAddImage() }
-        binding.otrosImgId.setOnClickListener { goAddImage() }
+        binding.tPropiedadId.setOnClickListener {
+            val addImage = Intent(this, AddImageActivity::class.java)
+            addImage.putExtra("documento","tpropiedad")
+            startActivity(addImage)
+        }
+        binding.TecnicoMecId.setOnClickListener {
+            val addImage = Intent(this, AddImageActivity::class.java)
+            addImage.putExtra("documento","tecnicomecanico")
+            startActivity(addImage)
+        }
+        binding.soatId.setOnClickListener {
+            val addImage = Intent(this, AddImageActivity::class.java)
+            addImage.putExtra("documento","soat")
+            startActivity(addImage)
+        }
+        binding.otrosImgId.setOnClickListener {
+            val addImage = Intent(this, AddImageActivity::class.java)
+            addImage.putExtra("documento","otros")
+            startActivity(addImage)
+        }
 
         binding.buttonSaveId.setOnClickListener {
             goToProfile()
         }
-    }
-
-    // Method that directs the user to the Add Image Activity
-    private fun goAddImage(){
-        val addImage = Intent(this, AddImageActivity::class.java)
-        startActivity(addImage)
     }
 
     // Method that directs the user to the Add Image Activity

@@ -5,8 +5,8 @@ import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
-import android.graphics.BitmapFactory
 import android.graphics.Color
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.provider.MediaStore
@@ -14,30 +14,94 @@ import android.util.Log
 import android.widget.Toast
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import androidx.core.content.FileProvider
-import androidx.core.view.setPadding
+
 import com.example.garage_vgo.databinding.ActivityAddImgBinding
-import java.io.File
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.StorageReference
 
 class AddImageActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityAddImgBinding
     private var uriPath : String = ""
+    //
+    private val fileResult = 1
+    private lateinit var auth : FirebaseAuth
+    private lateinit var user : FirebaseUser
+    private lateinit var uid : String
+    private val database = FirebaseFirestore.getInstance()
+    private val myRef = database.collection("users")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         binding = ActivityAddImgBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         requestPermission()
+        auth = FirebaseAuth.getInstance()
+        user = auth.currentUser!!
+        uid = user.uid
+
         binding.buttonCamera.setOnClickListener {
             startForResult.launch(Intent(MediaStore.ACTION_IMAGE_CAPTURE))
         }
 
         binding.buttonGalery.setOnClickListener {
-            pickPhoto()
+            fileManager()
+        }
+    }
+
+    private fun fileManager() {
+        val intent = Intent(Intent.ACTION_GET_CONTENT)
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.JELLY_BEAN_MR2) {
+            intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true)
+        }
+        intent.type = "*/*"
+        startActivityForResult(intent, fileResult)
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == fileResult) {
+            if (resultCode == RESULT_OK && data != null) {
+
+                val clipData = data.clipData
+
+                if (clipData != null){
+                    for (i in 0 until clipData.itemCount) {
+                        val uri = clipData.getItemAt(i).uri
+                        uri?.let { fileUpload(it) }
+                    }
+                }else {
+                    val uri = data.data
+                    uri?.let { fileUpload(it) }
+                }
+            }
+        }
+    }
+
+    private fun fileUpload(mUri: Uri) {
+        val folder: StorageReference = FirebaseStorage.getInstance().reference.child(uid)
+        val path =mUri.lastPathSegment.toString()
+        val fileName: StorageReference = folder.child(path.substring(path.lastIndexOf('/')+1))
+
+        fileName.putFile(mUri).addOnSuccessListener {
+            fileName.downloadUrl.addOnSuccessListener { uri ->
+                val hashMap = HashMap<String, String>()
+                hashMap["link"] = java.lang.String.valueOf(uri)
+                val tipo:String = intent.getStringExtra("documento").toString()
+
+                myRef.document(uid).collection("documentos").document(tipo).set(hashMap)
+                showAlert("Se han cargado los archivos correctamente!")
+            }
+        }.addOnFailureListener {
+            Log.i("message", "file upload error")
         }
     }
 
@@ -105,5 +169,14 @@ class AddImageActivity : AppCompatActivity() {
         }else{
             Toast.makeText(this,"NecesitaPermisos", Toast.LENGTH_SHORT).show()
         }
+    }
+
+    private fun showAlert(msg : String){
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("Mensaje:")
+        builder.setMessage(msg)
+        builder.setPositiveButton("Aceptar", null)
+        val dialog: AlertDialog = builder.create()
+        dialog.show()
     }
 }

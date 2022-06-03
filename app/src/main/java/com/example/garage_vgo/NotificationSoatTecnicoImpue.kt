@@ -35,6 +35,14 @@ class NotificationSoatTecnicoImpue : AppCompatActivity() {
             datePickerDialog.show()
         }
 
+        val documento:String = intent.getStringExtra("tipo").toString()
+
+        when (documento) {
+            "impuestos" -> binding.textView8.text = "Fecha de vencimiento de los impuestos"
+            "tecnicomecanico" -> binding.textView8.text = "Fecha de vencimiento del tecnico mecanico"
+            "soat" -> binding.textView8.text = "Fecha de vencimiento del SOAT"
+        }
+
         binding.btEnviarSoat.setOnClickListener {  }
 
         binding.btCancelarSoat.setOnClickListener { finish() }
