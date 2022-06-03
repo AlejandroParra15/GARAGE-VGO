@@ -13,7 +13,8 @@
         <entry key="app/src/main/res/layout/activity_add_img.xml" value="0.1598731884057971" />
         <entry key="app/src/main/res/layout/activity_addvehicle.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.25081024169921873" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25455322265625" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_main2.xml" value="0.1598731884057971" />
         <entry key="app/src/main/res/layout/activity_navigation.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.25285797119140624" />
         <entry key="app/src/main/res/layout/dialog_forgot_password.xml" value="0.27717391304347827" />

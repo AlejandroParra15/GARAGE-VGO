@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GARAGEVGO">
         <activity
+            android:name=".ViewImgActivity"
+            android:exported="false" />
+        <activity
             android:name=".HomeActivity"
             android:exported="true" />
         <activity
