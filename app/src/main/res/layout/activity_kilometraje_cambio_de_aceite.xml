@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#2C699A"
+    android:background="@drawable/aceite1"
     tools:context=".KilometrajeCambioDeAceite">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="0dp"
-        android:layout_height="430dp"
-        android:background="@drawable/aceite1"
+        android:layout_height="0dp"
+        android:background="#B02C699A"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -18,7 +19,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:background="#DC2C699A"
+            android:background="#80000000"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
@@ -28,11 +29,11 @@
 
             <TextView
                 android:id="@+id/textView"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="41dp"
-                android:layout_marginTop="52dp"
-                android:layout_marginEnd="213dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="60dp"
                 android:text="Cambio de aceite"
                 android:textColor="#F8F8F8"
                 android:textSize="20dp"
@@ -45,7 +46,7 @@
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="60dp"
                 android:text="Seleccione el vehículo"
                 android:textColor="#B9E769"
                 app:layout_constraintEnd_toEndOf="@+id/vehicleSelectId"
@@ -57,13 +58,11 @@
                 android:id="@+id/vehicleSelectId"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="40dp"
-                android:layout_marginEnd="40dp"
                 android:backgroundTint="#B9E769"
                 android:minHeight="48dp"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/textView"
                 app:layout_constraintHorizontal_bias="0.777"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView"
                 app:layout_constraintTop_toBottomOf="@+id/textView3"
                 tools:ignore="SpeakableTextPresentCheck" />
 
@@ -71,7 +70,7 @@
                 android:id="@+id/textView4"
                 android:layout_width="wrap_content"
                 android:layout_height="19dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="20dp"
                 android:text="Ingrese el kilometraje de ultimo cambio de aceite"
                 android:textColor="#B9E769"
                 app:layout_constraintBottom_toTopOf="@+id/kilometrajeAnteriorId"
@@ -90,6 +89,7 @@
                 android:inputType="number"
                 android:minHeight="48dp"
                 android:textColor="#FDFDFD"
+                android:textColorHint="#5BFFFFFF"
                 app:layout_constraintEnd_toEndOf="@+id/vehicleSelectId"
                 app:layout_constraintStart_toStartOf="@+id/vehicleSelectId"
                 app:layout_constraintTop_toBottomOf="@+id/textView4" />
@@ -98,7 +98,7 @@
                 android:id="@+id/textView5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="20dp"
                 android:text="Cada cuanto desea cambiar el aceite?"
                 android:textColor="#B9E769"
                 app:layout_constraintEnd_toEndOf="@+id/kilometrajeId"
@@ -122,14 +122,13 @@
                 android:id="@+id/saveCambioAceiteId"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
-                android:layout_marginTop="21dp"
-                android:layout_marginEnd="20dp"
+                android:layout_marginTop="30dp"
                 android:backgroundTint="#B9E769"
                 android:text="ENVIAR"
                 android:textColor="#173B57"
                 android:textStyle="bold"
                 app:cornerRadius="10dp"
-                app:layout_constraintEnd_toStartOf="@+id/cancelarId"
+                app:layout_constraintEnd_toEndOf="@+id/kilometrajeId"
                 app:layout_constraintStart_toStartOf="@+id/kilometrajeId"
                 app:layout_constraintTop_toBottomOf="@+id/kilometrajeId" />
 
@@ -137,16 +136,15 @@
                 android:id="@+id/cancelarId"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="21dp"
-                android:backgroundTint="#5B000000"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#FFFFFF"
                 android:text="CANCELAR"
-                android:textColor="#B9E769"
+                android:textColor="#173B57"
                 android:textStyle="bold"
                 app:cornerRadius="10dp"
-                app:layout_constraintEnd_toEndOf="@+id/kilometrajeId"
-                app:layout_constraintStart_toEndOf="@+id/saveCambioAceiteId"
-                app:layout_constraintTop_toBottomOf="@+id/kilometrajeId" />
+                app:layout_constraintEnd_toEndOf="@+id/saveCambioAceiteId"
+                app:layout_constraintStart_toStartOf="@+id/saveCambioAceiteId"
+                app:layout_constraintTop_toBottomOf="@+id/saveCambioAceiteId" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
