@@ -1,7 +1,9 @@
 package com.example.garage_vgo
 
 import android.app.DatePickerDialog
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
@@ -19,6 +21,7 @@ class RegisterActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRegisterBinding
     private lateinit var auth : FirebaseAuth
     private lateinit var datePickerDialog : DatePickerDialog
+    private lateinit var sharedPreferences: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,6 +30,8 @@ class RegisterActivity : AppCompatActivity() {
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
         //
+
+        sharedPreferences = getSharedPreferences("SHARED_PREF", Context.MODE_PRIVATE)
 
         auth = FirebaseAuth.getInstance()
 
@@ -81,7 +86,10 @@ class RegisterActivity : AppCompatActivity() {
                         val db = FirebaseFirestore.getInstance()
 
                         db.collection("users").document(uid).set(map).addOnSuccessListener {
-                            goHome()
+                            val editor : SharedPreferences.Editor = sharedPreferences.edit()
+                            editor.putString("EMAIL",email)
+                            editor.apply()
+                            goRegisterVehicle()
                             Toast.makeText(this, "Usuario Registrado", Toast.LENGTH_SHORT).show()
                         }
                             .addOnFailureListener {
@@ -111,9 +119,10 @@ class RegisterActivity : AppCompatActivity() {
     }
 
     // Method that directs the user to the home activity
-    private fun goHome(){
-        val homeIntent = Intent(this, HomeActivity::class.java)
-        startActivity(homeIntent)
+    private fun goRegisterVehicle(){
+        val addVehicleActivity = Intent(this, AddVehicleActivity::class.java)
+        startActivity(addVehicleActivity)
+        finish()
     }
 
     override fun onStart() {

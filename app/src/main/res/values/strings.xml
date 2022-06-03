@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">GARAGE-VGO</string>
+
+    <string-array name="Vehiculos">
+        <item>Carro</item>
+        <item>Moto</item>
+    </string-array>
+
+    <string-array name="KmCarro">
+        <item>5.000</item>
+        <item>8.000</item>
+        <item>10.000</item>
+        <item>15.000</item>
+    </string-array>
+
+    <string-array name="KmMoto">
+        <item>2.000</item>
+        <item>4.000</item>
+        <item>6.000</item>
+        <item>8000</item>
+    </string-array>
 </resources>
