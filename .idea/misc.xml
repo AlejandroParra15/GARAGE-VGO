@@ -3,50 +3,42 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Administrador/AndroidStudioProjects/GARAGEVGO/app/src/main/res/drawable/button_black_background.xml" value="0.2745" />
-        <entry key="..\:/Users/Administrador/AndroidStudioProjects/GARAGEVGO/app/src/main/res/drawable/homebtn.xml" value="0.196" />
-        <entry key="..\:/Users/Administrador/AndroidStudioProjects/GARAGEVGO/app/src/main/res/drawable/likebtn.xml" value="0.196" />
-        <entry key="..\:/Users/Administrador/AndroidStudioProjects/GARAGEVGO/app/src/main/res/drawable/postbtn.xml" value="0.196" />
-        <entry key="..\:/Users/Administrador/AndroidStudioProjects/GARAGEVGO/app/src/main/res/drawable/profilebtn.xml" value="0.196" />
-        <entry key="..\:/Users/Administrador/AndroidStudioProjects/GARAGEVGO/app/src/main/res/drawable/savebtn.xml" value="0.196" />
-        <entry key="..\:/Users/Administrador/AndroidStudioProjects/GARAGEVGO/app/src/main/res/drawable/searchbtn.xml" value="0.196" />
-        <entry key="..\:/Users/Administrador/AndroidStudioProjects/GARAGEVGO/app/src/main/res/drawable/shopbtn.xml" value="0.196" />
         <entry key="..\:/Users/Administrador/AndroidStudioProjects/GARAGEVGO/app/src/main/res/drawable/splash_background.xml" value="0.2465" />
-        <entry key="..\:/Users/Administrador/AndroidStudioProjects/GARAGEVGO/app/src/main/res/drawable/splashscreen.xml" value="0.196" />
-        <entry key="..\:/Users/Administrador/AndroidStudioProjects/GARAGEVGO/app/src/main/res/layout/activity_addvehicle.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Administrador/AndroidStudioProjects/GARAGEVGO/app/src/main/res/layout/activity_home.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/Administrador/AndroidStudioProjects/GARAGEVGO/app/src/main/res/layout/activity_kilometraje_cambio_de_aceite.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Administrador/AndroidStudioProjects/GARAGEVGO/app/src/main/res/layout/activity_main.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/Administrador/AndroidStudioProjects/GARAGEVGO/app/src/main/res/layout/activity_navigation.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/Administrador/AndroidStudioProjects/GARAGEVGO/app/src/main/res/layout/activity_notification_pico_yplaca.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/Administrador/AndroidStudioProjects/GARAGEVGO/app/src/main/res/layout/activity_notification_soat_tecnico_impue.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Administrador/AndroidStudioProjects/GARAGEVGO/app/src/main/res/layout/activity_register.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/Administrador/AndroidStudioProjects/GARAGEVGO/app/src/main/res/layout/activity_settings.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/Administrador/AndroidStudioProjects/GARAGEVGO/app/src/main/res/layout/activity_view_img.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Administrador/AndroidStudioProjects/GARAGEVGO/app/src/main/res/layout/dialog_forgot_password.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/Administrador/AndroidStudioProjects/GARAGEVGO/app/src/main/res/layout/fragment_add_img.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/Administrador/AndroidStudioProjects/GARAGEVGO/app/src/main/res/layout/fragment_navigation.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/Administrador/AndroidStudioProjects/GARAGEVGO/app/src/main/res/layout/fragment_notifications.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/Administrador/AndroidStudioProjects/GARAGEVGO/app/src/main/res/layout/fragment_profile.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/Administrador/AndroidStudioProjects/GARAGEVGO/app/src/main/res/menu/menu_toolbar.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/Administrador/AndroidStudioProjects/GARAGEVGO/app/src/main/res/menu/menuapp.xml" value="0.36666666666666664" />
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1495" />
+        <entry key="app/src/main/res/drawable/button_black_background.xml" value="0.1495" />
+        <entry key="app/src/main/res/drawable/buttons_background.xml" value="0.1495" />
+        <entry key="app/src/main/res/drawable/homebtn.xml" value="0.1495" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1495" />
+        <entry key="app/src/main/res/drawable/inputs_background.xml" value="0.1495" />
+        <entry key="app/src/main/res/drawable/likebtn.xml" value="0.1495" />
+        <entry key="app/src/main/res/drawable/postbtn.xml" value="0.1495" />
+        <entry key="app/src/main/res/drawable/profilebtn.xml" value="0.1495" />
+        <entry key="app/src/main/res/drawable/rectangle_radius_shape.xml" value="0.1495" />
+        <entry key="app/src/main/res/drawable/savebtn.xml" value="0.1495" />
+        <entry key="app/src/main/res/drawable/searchbtn.xml" value="0.1495" />
+        <entry key="app/src/main/res/drawable/shopbtn.xml" value="0.1495" />
         <entry key="app/src/main/res/drawable/splash_background.xml" value="0.227" />
+        <entry key="app/src/main/res/drawable/splashscreen.xml" value="0.1495" />
         <entry key="app/src/main/res/layout-v28/fragment_save_img.xml" value="0.1598731884057971" />
-        <entry key="app/src/main/res/layout/activity_add_img.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_add_img.xml" value="0.1598731884057971" />
         <entry key="app/src/main/res/layout/activity_addvehicle.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.25081024169921873" />
-        <entry key="app/src/main/res/layout/activity_kilometraje_cambio_de_aceite.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main2.xml" value="0.1598731884057971" />
         <entry key="app/src/main/res/layout/activity_navigation.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_notification_pico_yplaca.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_notification_soat_tecnico_impue.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.25285797119140624" />
+        <entry key="app/src/main/res/layout/activity_settings.xml" value="0.2649349710215693" />
         <entry key="app/src/main/res/layout/dialog_forgot_password.xml" value="0.27717391304347827" />
         <entry key="app/src/main/res/layout/fragment.xml" value="0.27717391304347827" />
         <entry key="app/src/main/res/layout/fragment_add_img.xml" value="0.27717391304347827" />
         <entry key="app/src/main/res/layout/fragment_navigation.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.15942028985507245" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.37539936010388364" />
         <entry key="app/src/main/res/layout/fragment_save_img.xml" value="0.25" />
         <entry key="app/src/main/res/menu/menuapp.xml" value="0.30625" />
       </map>

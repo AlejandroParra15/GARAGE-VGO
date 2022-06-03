@@ -4,7 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondo4"
     tools:context=".SettingsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#B02C699A"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -19,7 +32,7 @@
             android:id="@+id/appbarlayout_profile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:color/white">
+            android:background="#B02C699A">
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/profile_toolbar"
@@ -28,20 +41,21 @@
                 android:layout_marginLeft="6dp"
                 android:layout_marginTop="4dp"
                 android:layout_marginRight="6dp"
-                android:background="@android:color/white">
+                android:background="#B02C699A">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#B02C699A">
 
                     <ImageView
                         android:id="@+id/close_profile_btn"
-                        android:layout_width="20dp"
+                        android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_alignParentStart="true"
                         android:src="@drawable/close"
 
-                        />
+                        app:srcCompat="@drawable/closeicon" />
 
                     <ImageView
                         android:id="@+id/save_info_profile_btn"
@@ -51,115 +65,174 @@
                         android:layout_marginRight="15dp"
                         android:src="@drawable/save_edited_info"
 
-                        />
+                        app:srcCompat="@drawable/checkicon" />
 
                 </RelativeLayout>
             </androidx.appcompat.widget.Toolbar>
 
         </com.google.android.material.appbar.AppBarLayout>
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/profile_image_view_profilefragment"
-            android:layout_width="130dp"
-            android:layout_height="130dp"
-            android:layout_below="@+id/appbarlayout_profile"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="15dp"
-            android:src="@drawable/profile"
-
-            />
-
-        <TextView
-            android:id="@+id/change_image_text_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/profile_image_view_profilefragment"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="6dp"
-            android:text="Change Image from Camera"
-            android:textColor="#048BA8"
-            android:textSize="16dp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/change_image_gallery_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/change_image_text_btn"
-            android:layout_centerHorizontal="true"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"
-            android:text="Change Image from Gallery"
-            android:textColor="#048BA8"
-            android:textSize="16dp"
-            android:textStyle="bold">
-
-        </TextView>
-
-        <EditText
-            android:id="@+id/full_name_profilefragment"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/change_image_gallery_btn"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginRight="20dp"
-            android:hint="Full Name"
-            android:inputType="text" />
-
-        <EditText
-            android:id="@+id/username_profilefragment"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/full_name_profilefragment"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginRight="20dp"
-            android:hint="Username"
-            android:inputType="text" />
-
-        <EditText
-            android:id="@+id/bio_profilefragment"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/username_profilefragment"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginRight="20dp"
-            android:hint="Bio"
-            android:inputType="text"
-
-            />
-
-        <Button
-            android:id="@+id/logout_btn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_above="@id/deleteaccount_btn_profilefragment"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="6dp"
-            android:background="#000000"
-            android:text="Logout"
-            android:textAllCaps="false"
-            android:textColor="#FFFFFF"
-
-            android:textSize="16dp" />
-
-        <Button
-            android:id="@+id/deleteaccount_btn_profilefragment"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="6dp"
-            android:text="Delete Account"
-            android:textAllCaps="false"
-            android:textColor="@android:color/white"
-
-            android:textSize="16dp" />
-
 
     </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <EditText
+        android:id="@+id/full_name_profilefragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="60dp"
+        android:backgroundTint="#B9E769"
+        android:inputType="text"
+
+        android:textColorHint="#B9E769"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/change_image_gallery_btn" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="180dp"
+        android:text="Nombre completo"
+        android:textColor="#B9E769"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/change_image_gallery_btn" />
+
+    <EditText
+        android:id="@+id/username_profilefragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="60dp"
+        android:backgroundTint="#B9E769"
+        android:inputType="text"
+        android:textColorHint="#B9E769"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/full_name_profilefragment" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="240dp"
+        android:text="Usuario"
+        android:textColor="#B9E769"
+        app:layout_constraintEnd_toEndOf="@+id/constraintLayout3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/full_name_profilefragment" />
+
+    <EditText
+        android:id="@+id/bio_profilefragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="60dp"
+        android:backgroundTint="#B9E769"
+        android:inputType="text"
+        android:textColorHint="#B9E769"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/username_profilefragment" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="215dp"
+        android:text="Descripcion"
+        android:textColor="#B9E769"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/username_profilefragment" />
+
+    <Button
+        android:id="@+id/logout_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="60dp"
+
+        android:backgroundTint="#FFB9E769"
+        android:text="Cerrar Sesion"
+        android:textAllCaps="false"
+        android:textColor="#173B57"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bio_profilefragment" />
+
+    <Button
+        android:id="@+id/deleteaccount_btn_profilefragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="60dp"
+
+        android:backgroundTint="#FFFFFF"
+        android:text="Eliminar Cuenta"
+        android:textAllCaps="false"
+        android:textColor="#173B57"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logout_btn" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image_view_profilefragment"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:src="@drawable/profile"
+
+        tools:layout_editor_absoluteX="141dp"
+        tools:layout_editor_absoluteY="69dp" />
+
+    <TextView
+        android:id="@+id/change_image_text_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#B9E769"
+        android:padding="5dp"
+        android:text="Change Image from Camera"
+        android:textColor="#173B57"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="101dp"
+        tools:layout_editor_absoluteY="214dp" />
+
+    <TextView
+        android:id="@+id/change_image_gallery_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#B9E769"
+        android:padding="5dp"
+        android:text="Change Image from Gallery"
+        android:textColor="#173B57"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="103dp"
+        tools:layout_editor_absoluteY="260dp">
+
+    </TextView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
