@@ -19,57 +19,62 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ImageContrastCheck" />
 
     <TextView
         android:id="@+id/lbUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="50dp"
-        android:text="USUARIO"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="64dp"
+        android:text="Usuario"
+        android:textColor="#B9E769"
+        app:layout_constraintEnd_toEndOf="@+id/etUser"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/etUser"
         app:layout_constraintTop_toBottomOf="@+id/ivProfileImage" />
 
     <TextView
         android:id="@+id/tvForgotPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="40dp"
+        android:layout_width="163dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="227dp"
         android:gravity="center"
-        android:text="RECUPERAR CONTRASEÑA"
+        android:text="Recuperar contraseña?"
         android:textAlignment="center"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btGoogle" />
+        android:textColor="#FBFBFB"
+        app:layout_constraintEnd_toEndOf="@+id/etPassword"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/etPassword"
+        app:layout_constraintTop_toBottomOf="@+id/etPassword" />
 
     <TextView
         android:id="@+id/tvCreateAccount"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="40dp"
+        android:layout_width="148dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="81dp"
         android:gravity="center"
         android:text="CREAR UNA CUENTA"
         android:textAlignment="center"
+        android:textColor="#E8E8E8"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvForgotPassword" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btGoogle"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/btGoogle"
+        app:layout_constraintTop_toBottomOf="@+id/btGoogle" />
 
     <TextView
         android:id="@+id/lbPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="20dp"
-        android:text="CONTRASEÑA"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="24dp"
+        android:text="Ccontraseña"
+        android:textColor="#B9E769"
+        app:layout_constraintEnd_toEndOf="@+id/etPassword"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/etPassword"
         app:layout_constraintTop_toBottomOf="@+id/etUser" />
 
     <EditText
@@ -79,51 +84,58 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="40dp"
+        android:backgroundTint="#B9E769"
         android:ems="10"
         android:inputType="textPersonName"
+        android:textColor="#FDFDFD"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lbUser"
-        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/etPassword"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginStart="40dp"
         android:layout_marginTop="5dp"
-        android:layout_marginEnd="40dp"
+        android:backgroundTint="#B9E769"
         android:ems="10"
         android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="#FDFDFD"
+        app:layout_constraintEnd_toEndOf="@+id/etUser"
+        app:layout_constraintStart_toStartOf="@+id/etUser"
         app:layout_constraintTop_toBottomOf="@+id/lbPassword"
-        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck"
+        android:autofillHints="" />
 
     <Button
         android:id="@+id/btLogIn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="60dp"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="#B9E769"
         android:text="ENTRAR"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPassword" />
+        android:textColor="#173B57"
+        android:textStyle="bold"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/etPassword"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/etPassword"
+        app:layout_constraintTop_toBottomOf="@+id/tvForgotPassword" />
 
     <Button
         android:id="@+id/btGoogle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="60dp"
+        android:layout_marginTop="15dp"
         android:backgroundTint="@color/white"
         android:drawableLeft="@drawable/google_2"
         android:text="Continuar con Google"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="#173B57"
+        android:textStyle="bold"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/btLogIn"
+        app:layout_constraintStart_toStartOf="@+id/btLogIn"
         app:layout_constraintTop_toBottomOf="@+id/btLogIn" />
 </androidx.constraintlayout.widget.ConstraintLayout>
