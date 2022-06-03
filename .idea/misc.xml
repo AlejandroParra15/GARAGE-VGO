@@ -30,16 +30,15 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main2.xml" value="0.1598731884057971" />
         <entry key="app/src/main/res/layout/activity_navigation.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/activity_notification_pico_yplaca.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_notification_soat_tecnico_impue.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.25285797119140624" />
-        <entry key="app/src/main/res/layout/activity_settings.xml" value="0.2649349710215693" />
+        <entry key="app/src/main/res/layout/activity_settings.xml" value="0.1821441650390625" />
         <entry key="app/src/main/res/layout/dialog_forgot_password.xml" value="0.27717391304347827" />
         <entry key="app/src/main/res/layout/fragment.xml" value="0.27717391304347827" />
         <entry key="app/src/main/res/layout/fragment_add_img.xml" value="0.27717391304347827" />
         <entry key="app/src/main/res/layout/fragment_navigation.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.37539936010388364" />
         <entry key="app/src/main/res/layout/fragment_save_img.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_vehicle.xml" value="0.27347836701766315" />
         <entry key="app/src/main/res/menu/menuapp.xml" value="0.30625" />
       </map>
     </option>

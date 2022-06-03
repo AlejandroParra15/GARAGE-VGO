@@ -202,36 +202,42 @@
         android:id="@+id/profile_image_view_profilefragment"
         android:layout_width="130dp"
         android:layout_height="130dp"
-        android:src="@drawable/profile"
+        android:layout_marginTop="70dp"
 
-        tools:layout_editor_absoluteX="141dp"
-        tools:layout_editor_absoluteY="69dp" />
+        android:src="@drawable/profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout3" />
 
     <TextView
         android:id="@+id/change_image_text_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
         android:background="#B9E769"
         android:padding="5dp"
         android:text="Change Image from Camera"
         android:textColor="#173B57"
         android:textSize="16dp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="101dp"
-        tools:layout_editor_absoluteY="214dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_image_view_profilefragment" />
 
     <TextView
         android:id="@+id/change_image_gallery_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
         android:background="#B9E769"
         android:padding="5dp"
         android:text="Change Image from Gallery"
         android:textColor="#173B57"
         android:textSize="16dp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="103dp"
-        tools:layout_editor_absoluteY="260dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/change_image_text_btn">
 
     </TextView>
 
