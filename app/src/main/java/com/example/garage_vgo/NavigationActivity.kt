@@ -16,6 +16,7 @@ class NavigationActivity : AppCompatActivity(){
     private lateinit var binding: ActivityNavigationBinding
     private lateinit var profileFragmentFragment : ProfileFragment
     private lateinit var notifyFragment : FragmentNotifications
+    private lateinit var vehicleFragment : VehicleFragment
     private lateinit var sharedPreferences: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,7 +31,7 @@ class NavigationActivity : AppCompatActivity(){
 
         profileFragmentFragment = ProfileFragment.newInstance()
         notifyFragment = FragmentNotifications.newInstance()
-        //postFragment = PostFragment.newInstance()
+        vehicleFragment = VehicleFragment.newInstance()
 
         showFragment(profileFragmentFragment)
         binding.bottomNavigationView.setOnItemSelectedListener { menuItem->
@@ -39,7 +40,7 @@ class NavigationActivity : AppCompatActivity(){
             }else if(menuItem.itemId == R.id.notify){
                 showFragment(notifyFragment)
             }else{
-                showFragment(profileFragmentFragment)
+                showFragment(vehicleFragment)
             }
             true
         }

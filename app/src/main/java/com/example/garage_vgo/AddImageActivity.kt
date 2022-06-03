@@ -114,30 +114,6 @@ class AddImageActivity : AppCompatActivity() {
             }
         }
 
-    private fun pickPhoto(){
-        val intent=Intent(Intent.ACTION_OPEN_DOCUMENT)
-        intent.type="image/*"
-        intent.addFlags(Intent.FLAG_GRANT_PERSISTABLE_URI_PERMISSION)
-        intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-        startForActivityGallery.launch(intent)
-    }
-
-    private val startForActivityGallery=registerForActivityResult(
-        ActivityResultContracts.StartActivityForResult()
-    ){result->
-
-        if(result.resultCode== Activity.RESULT_OK){
-            val uri = result.data?.data!!
-            this.contentResolver.takePersistableUriPermission(
-                uri,
-                Intent.FLAG_GRANT_READ_URI_PERMISSION
-            )
-            binding.imageView.setBackgroundColor(Color.TRANSPARENT)
-            binding.imageView.setImageURI(uri)
-            uriPath = uri.toString()
-        }
-    }
-
     private fun requestPermission() {
 
         if (Build.VERSION.SDK_INT>= Build.VERSION_CODES.M){
