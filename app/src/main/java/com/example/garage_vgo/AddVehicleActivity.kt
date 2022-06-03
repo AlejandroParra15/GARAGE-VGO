@@ -26,7 +26,6 @@ class AddVehicleActivity : AppCompatActivity(){
         binding.spinnerCarOrMotId.onItemSelectedListener = object :
             AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
-                Toast.makeText(this@AddVehicleActivity, vehicleOptions[position],Toast.LENGTH_LONG)
                 if(position == 0){
                     val carOptions = resources.getStringArray(R.array.KmCarro)
                     val carAdapter = ArrayAdapter(this@AddVehicleActivity, android.R.layout.simple_spinner_item, carOptions)
@@ -47,12 +46,22 @@ class AddVehicleActivity : AppCompatActivity(){
         binding.TecnicoMecId.setOnClickListener { goAddImage() }
         binding.soatId.setOnClickListener { goAddImage() }
         binding.otrosImgId.setOnClickListener { goAddImage() }
+
+        binding.buttonSaveId.setOnClickListener {
+            goToProfile()
+        }
     }
 
     // Method that directs the user to the Add Image Activity
     private fun goAddImage(){
         val addImage = Intent(this, AddImageActivity::class.java)
         startActivity(addImage)
+    }
+
+    // Method that directs the user to the Add Image Activity
+    private fun goToProfile(){
+        val profile = Intent(this, NavigationActivity::class.java)
+        startActivity(profile)
         finish()
     }
 }

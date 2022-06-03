@@ -4,14 +4,17 @@
 
 
     <item
-        android:icon="@drawable/profile_icon"
+        android:id="@+id/profile"
 
-        android:title="profileItem" />
+        android:icon="@drawable/profile_icon"
+        android:title="perfil" />
     <item
+        android:id="@+id/vehicle"
         android:icon="@drawable/rin_icon"
-        android:title="myVehicleItem" />
+        android:title="mis vehiculos" />
     <item
+        android:id="@+id/notify"
         android:icon="@drawable/notify_icon"
-        android:title="notifyItem" />
+        android:title="notificaciones" />
 
 </menu>

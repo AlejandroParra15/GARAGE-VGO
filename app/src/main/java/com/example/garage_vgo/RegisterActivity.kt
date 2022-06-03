@@ -88,6 +88,7 @@ class RegisterActivity : AppCompatActivity() {
                         db.collection("users").document(uid).set(map).addOnSuccessListener {
                             val editor : SharedPreferences.Editor = sharedPreferences.edit()
                             editor.putString("EMAIL",email)
+                            editor.putString("NAME", "$name $lastName")
                             editor.apply()
                             goRegisterVehicle()
                             Toast.makeText(this, "Usuario Registrado", Toast.LENGTH_SHORT).show()

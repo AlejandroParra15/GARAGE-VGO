@@ -3,5 +3,5 @@
     <item android:drawable="@drawable/profileenabledsized"
         android:state_selected="true"
         />
-    <item android:drawable="@drawable/profiledisabledsized"/>
+    <item android:drawable="@drawable/options"/>
 </selector>

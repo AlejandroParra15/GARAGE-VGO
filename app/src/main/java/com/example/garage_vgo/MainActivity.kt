@@ -15,6 +15,7 @@ import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthCredential
 import com.google.firebase.auth.GoogleAuthProvider
+import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
 
 class MainActivity : AppCompatActivity() {
@@ -23,6 +24,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var auth : FirebaseAuth
     private lateinit var sharedPreferences: SharedPreferences
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -83,6 +85,7 @@ class MainActivity : AppCompatActivity() {
                 binding.etPassword.text.toString()).addOnCompleteListener(){
                 // validate if the authentication is successful
                     if(it.isSuccessful){
+                        saveName()
                         val editor : SharedPreferences.Editor = sharedPreferences.edit()
                         editor.putString("EMAIL",binding.etUser.text.toString())
                         editor.apply()
@@ -92,6 +95,20 @@ class MainActivity : AppCompatActivity() {
                         showAlert()
                     }
                 }
+        }
+    }
+
+    private fun saveName(){
+        var db = FirebaseFirestore.getInstance()
+        val user = auth.currentUser
+        val uid = user!!.uid
+
+        db.collection("users").document(uid!!).get().addOnCompleteListener {
+            val name = it.result.get("nombre") as String
+            val lastName = it.result.get("apellido") as String
+            val editor : SharedPreferences.Editor = sharedPreferences.edit()
+            editor.putString("NAME","$name $lastName")
+            editor.apply()
         }
     }
 
@@ -107,7 +124,7 @@ class MainActivity : AppCompatActivity() {
 
     // Method that directs the user to the home activity
     private fun goHome(){
-        val homeIntent = Intent(this, HomeActivity::class.java)
+        val homeIntent = Intent(this, NavigationActivity::class.java)
         startActivity(homeIntent)
         finish()
     }
@@ -132,6 +149,7 @@ class MainActivity : AppCompatActivity() {
                     auth.signInWithCredential(credential).addOnCompleteListener(){
                         // validate if the authentication is successful
                         if(it.isSuccessful){
+                            saveName()
                             goHome()
                         } else {
                             //otherwise, display an alert
