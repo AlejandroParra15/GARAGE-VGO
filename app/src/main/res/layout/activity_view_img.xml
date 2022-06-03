@@ -4,49 +4,66 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#2C699A"
+    android:background="@drawable/addimgfondo"
     tools:context=".ViewImgActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/PhotosId"
-        android:layout_width="391dp"
-        android:layout_height="461dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="250dp"
-        android:background="#57000000"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#B02C699A"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/imageFrontPost"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/PhotosId"
             android:layout_width="0dp"
-            android:layout_height="206dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:srcCompat="@drawable/card" />
-
-        <ImageView
-            android:id="@+id/imageBackPost"
-            android:layout_width="0dp"
-            android:layout_height="206dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
+            android:layout_height="0dp"
+            android:background="#80000000"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageFrontPost"
-            tools:srcCompat="@drawable/card" />
+            app:layout_constraintTop_toTopOf="parent">
 
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="40dp"
+                android:text="Documentos"
+                android:textColor="#FDFDFD"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageFrontPost"
+                android:layout_width="0dp"
+                android:layout_height="206dp"
+                android:layout_marginTop="85dp"
+                app:layout_constraintEnd_toEndOf="@+id/textView18"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textView18"
+                app:layout_constraintTop_toBottomOf="@+id/textView18"
+                tools:srcCompat="@drawable/card" />
+
+            <ImageView
+                android:id="@+id/imageBackPost"
+                android:layout_width="0dp"
+                android:layout_height="206dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="150dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/imageFrontPost"
+                app:layout_constraintStart_toStartOf="@+id/imageFrontPost"
+                app:layout_constraintTop_toBottomOf="@+id/imageFrontPost"
+                tools:srcCompat="@drawable/card" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

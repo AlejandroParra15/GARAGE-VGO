@@ -4,80 +4,102 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#2C699A"
-    tools:context=".FragmentNotifications" >
+    android:background="@drawable/imgnotification"
+    tools:context=".FragmentNotifications">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="386dp"
-        android:background="#00000000">
+        android:layout_height="match_parent"
+        android:background="#B02C699A">
 
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="70dp"
-            android:layout_marginEnd="30dp"
-            android:layout_marginBottom="40dp"
-            android:orientation="vertical"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#80000000"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <Button
-                android:id="@+id/notificationSoat"
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#07000000"
-                android:text="SOAT"
-                android:textColor="#B9E769"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="60dp"
+                android:text="Notificaciones"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
                 android:textStyle="bold"
-                app:cornerRadius="10dp" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-            <Button
-                android:id="@+id/notificationImpuestos"
-                android:layout_width="match_parent"
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#07000000"
-                android:text="Impuestos"
-                android:textColor="#B9E769"
-                android:textStyle="bold"
-                app:cornerRadius="10dp" />
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="80dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/textView19"
+                app:layout_constraintStart_toStartOf="@+id/textView19"
+                app:layout_constraintTop_toBottomOf="@+id/textView19">
 
-            <Button
-                android:id="@+id/notificationPicoyplaca"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="#07000000"
-                android:text="Pico y placa"
-                android:textColor="#B9E769"
-                android:textStyle="bold"
-                app:cornerRadius="10dp" />
+                <Button
+                    android:id="@+id/notificationSoat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#2C699A"
+                    android:text="SOAT"
+                    android:textColor="#B9E769"
+                    android:textStyle="bold"
+                    app:cornerRadius="10dp" />
 
-            <Button
-                android:id="@+id/notificationAceite"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="#07000000"
-                android:text="Cambio de aceite"
-                android:textColor="#B9E769"
-                android:textStyle="bold"
-                app:cornerRadius="10dp" />
+                <Button
+                    android:id="@+id/notificationImpuestos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#2C699A"
+                    android:text="Impuestos"
+                    android:textColor="#B9E769"
+                    android:textStyle="bold"
+                    app:cornerRadius="10dp" />
 
-            <Button
-                android:id="@+id/notificationTecnico"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="#07000000"
-                android:text="Tecnico mecanico"
-                android:textColor="#B9E769"
-                android:textStyle="bold"
-                app:cornerRadius="10dp" />
+                <Button
+                    android:id="@+id/notificationPicoyplaca"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#2C699A"
+                    android:text="Pico y placa"
+                    android:textColor="#B9E769"
+                    android:textStyle="bold"
+                    app:cornerRadius="10dp" />
 
-        </LinearLayout>
+                <Button
+                    android:id="@+id/notificationAceite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#2C699A"
+                    android:text="Cambio de aceite"
+                    android:textColor="#B9E769"
+                    android:textStyle="bold"
+                    app:cornerRadius="10dp" />
+
+                <Button
+                    android:id="@+id/notificationTecnico"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#2C699A"
+                    android:text="Tecnico mecanico"
+                    android:textColor="#B9E769"
+                    android:textStyle="bold"
+                    app:cornerRadius="10dp" />
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
