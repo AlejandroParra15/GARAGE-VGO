@@ -4,151 +4,168 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#2C699A"
+    android:background="@drawable/imgsotaim"
     android:focusable="false"
     android:textAlignment="textStart"
     tools:context=".NotificationSoatTecnicoImpue">
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="253dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="34dp"
-        android:layout_marginEnd="30dp"
-        android:text="Nombre del item a completar"
-        android:textColor="#FFFFFF"
-        android:textSize="18dp"
-        android:textStyle="bold"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#B02C699A"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:text="Seleccione el vehiculo"
-        android:textColor="#B9E769"
-        app:layout_constraintEnd_toEndOf="@+id/spinner"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/spinner"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#80000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="346dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:backgroundTint="#B9E769"
-        android:minWidth="30dp"
-        android:textAlignment="textStart"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7"
-        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="60dp"
+                android:text="Nombre del item a completar"
+                android:textColor="#FFFFFF"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="Fecha de vencimiento del SOAT"
-        android:textColor="#B9E769"
-        app:layout_constraintEnd_toEndOf="@+id/editTextDate"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editTextDate"
-        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:text="Seleccione el vehiculo"
+                android:textColor="#B9E769"
+                app:layout_constraintEnd_toEndOf="@+id/spinner"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/spinner"
+                app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
-    <EditText
-        android:id="@+id/editTextDate"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#B9E769"
-        android:ems="10"
-        android:focusable="false"
-        android:inputType="date"
-        android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="@+id/spinner"
-        app:layout_constraintStart_toStartOf="@+id/spinner"
-        app:layout_constraintTop_toBottomOf="@+id/textView8"
-        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+            <CheckBox
+                android:id="@+id/checkBox2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:buttonTint="#B9E769"
+                android:text="15 dias antes de la fecha"
+                android:textColor="#EFEDED"
+                app:layout_constraintEnd_toEndOf="@+id/checkBox"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/checkBox"
+                app:layout_constraintTop_toBottomOf="@+id/checkBox" />
 
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="Cuando desea que sea notificado?"
-        android:textColor="#B9E769"
-        app:layout_constraintEnd_toEndOf="@+id/checkBox"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/checkBox"
-        app:layout_constraintTop_toBottomOf="@+id/editTextDate" />
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Cuando desea que sea notificado?"
+                android:textColor="#B9E769"
+                app:layout_constraintEnd_toEndOf="@+id/editTextDate"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/editTextDate"
+                app:layout_constraintTop_toBottomOf="@+id/editTextDate" />
 
-    <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:buttonTint="#B9E769"
-        android:text="1 mes antes de la fecha"
-        android:textColor="#EFEDED"
-        app:layout_constraintEnd_toEndOf="@+id/editTextDate"
-        app:layout_constraintStart_toStartOf="@+id/editTextDate"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+            <EditText
+                android:id="@+id/editTextDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#B9E769"
+                android:ems="10"
+                android:focusable="false"
+                android:inputType="date"
+                android:minHeight="48dp"
+                app:layout_constraintEnd_toEndOf="@+id/spinner"
+                app:layout_constraintStart_toStartOf="@+id/spinner"
+                app:layout_constraintTop_toBottomOf="@+id/textView8"
+                tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
-    <CheckBox
-        android:id="@+id/checkBox3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:buttonTint="#B9E769"
-        android:text="1 dia antes de la fecha"
-        android:textColor="#EFEDED"
-        app:layout_constraintEnd_toEndOf="@+id/checkBox2"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/checkBox2"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
+            <Button
+                android:id="@+id/btCancelarSoat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="#FFFFFF"
+                android:text="CANCELAR"
+                android:textColor="#173B57"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/btEnviarSoat"
+                app:layout_constraintStart_toStartOf="@+id/btEnviarSoat"
+                app:layout_constraintTop_toBottomOf="@+id/btEnviarSoat" />
 
-    <CheckBox
-        android:id="@+id/checkBox2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:buttonTint="#B9E769"
-        android:text="15 dias antes de la fecha"
-        android:textColor="#EFEDED"
-        app:layout_constraintEnd_toEndOf="@+id/checkBox"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/checkBox"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+            <Button
+                android:id="@+id/btEnviarSoat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="#B9E769"
+                android:text="ENVIAR"
+                android:textColor="#173B57"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/textView9"
+                app:layout_constraintStart_toStartOf="@+id/textView9"
+                app:layout_constraintTop_toBottomOf="@+id/checkBox3" />
 
-    <Button
-        android:id="@+id/btEnviarSoat"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="40dp"
-        android:backgroundTint="#B9E769"
-        android:text="ENVIAR"
-        android:textColor="#173B57"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/btCancelarSoat"
-        app:layout_constraintStart_toStartOf="@+id/checkBox3"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox3" />
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:backgroundTint="#B9E769"
+                android:minWidth="30dp"
+                android:textAlignment="textStart"
+                app:layout_constraintEnd_toEndOf="@+id/textView6"
+                app:layout_constraintStart_toStartOf="@+id/textView6"
+                app:layout_constraintTop_toBottomOf="@+id/textView7"
+                tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
-    <Button
-        android:id="@+id/btCancelarSoat"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="20dp"
-        android:backgroundTint="#52040404"
-        android:text="CANCELAR"
-        android:textColor="#B9E769"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/checkBox3"
-        app:layout_constraintStart_toEndOf="@+id/btEnviarSoat"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox3" />
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Fecha de vencimiento del SOAT"
+                android:textColor="#B9E769"
+                app:layout_constraintEnd_toEndOf="@+id/editTextDate"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/editTextDate"
+                app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+            <CheckBox
+                android:id="@+id/checkBox3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:buttonTint="#B9E769"
+                android:text="1 dia antes de la fecha"
+                android:textColor="#EFEDED"
+                app:layout_constraintEnd_toEndOf="@+id/checkBox2"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/checkBox2"
+                app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:buttonTint="#B9E769"
+                android:text="1 mes antes de la fecha"
+                android:textColor="#EFEDED"
+                app:layout_constraintEnd_toEndOf="@+id/textView9"
+                app:layout_constraintStart_toStartOf="@+id/textView9"
+                app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
