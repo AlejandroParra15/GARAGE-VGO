@@ -19,18 +19,18 @@ class FragmentNotifications : Fragment() {
         binding = FragmentNotificationsBinding.inflate(layoutInflater, container, false)
 
         binding.notificationTecnico.setOnClickListener {
-            val addImage = Intent(requireContext(), AddImageActivity::class.java)
+            val addImage = Intent(requireContext(), NotificationSoatTecnicoImpue::class.java)
             addImage.putExtra("documento","tecnicomecanico")
             startActivity(addImage)
         }
         binding.notificationAceite.setOnClickListener { goCambioAceite() }
         binding.notificationImpuestos.setOnClickListener {
-            val addImage = Intent(requireContext(), AddImageActivity::class.java)
+            val addImage = Intent(requireContext(), NotificationSoatTecnicoImpue::class.java)
             addImage.putExtra("documento","impuestos")
             startActivity(addImage)
         }
         binding.notificationSoat.setOnClickListener {
-            val addImage = Intent(requireContext(), AddImageActivity::class.java)
+            val addImage = Intent(requireContext(), NotificationSoatTecnicoImpue::class.java)
             addImage.putExtra("documento","soat")
             startActivity(addImage)
         }

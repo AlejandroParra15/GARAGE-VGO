@@ -32,6 +32,10 @@
         <entry key="..\:/Users/Administrador/AndroidStudioProjects/GARAGEVGO/app/src/main/res/menu/menuapp.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Administrador/Documents/Git/GARAGE-VGO/app/src/main/res/layout/activity_kilometraje_cambio_de_aceite.xml" value="0.35643115942028986" />
         <entry key="..\:/Users/Administrador/Documents/Git/GARAGE-VGO/app/src/main/res/layout/activity_notification_pico_yplaca.xml" value="0.35643115942028986" />
+        <entry key="..\:/Users/Administrador/Documents/Git/GARAGE-VGO/app/src/main/res/layout/activity_settings.xml" value="0.35643115942028986" />
+        <entry key="..\:/Users/Administrador/Documents/Git/GARAGE-VGO/app/src/main/res/layout/fragment_navigation.xml" value="0.35643115942028986" />
+        <entry key="..\:/Users/Administrador/Documents/Git/GARAGE-VGO/app/src/main/res/layout/fragment_notifications.xml" value="0.35643115942028986" />
+        <entry key="..\:/Users/Administrador/Documents/Git/GARAGE-VGO/app/src/main/res/menu/menu_toolbar.xml" value="0.36666666666666664" />
         <entry key="app/src/main/res/drawable/splash_background.xml" value="0.227" />
         <entry key="app/src/main/res/layout-v28/fragment_save_img.xml" value="0.1598731884057971" />
         <entry key="app/src/main/res/layout/activity_add_img.xml" value="0.25" />
@@ -42,7 +46,7 @@
         <entry key="app/src/main/res/layout/activity_main2.xml" value="0.1598731884057971" />
         <entry key="app/src/main/res/layout/activity_navigation.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_notification_pico_yplaca.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_notification_soat_tecnico_impue.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_notification_soat_tecnico_impue.xml" value="0.15942028985507245" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.25285797119140624" />
         <entry key="app/src/main/res/layout/dialog_forgot_password.xml" value="0.27717391304347827" />
         <entry key="app/src/main/res/layout/fragment.xml" value="0.27717391304347827" />
@@ -50,6 +54,7 @@
         <entry key="app/src/main/res/layout/fragment_navigation.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.15942028985507245" />
         <entry key="app/src/main/res/layout/fragment_save_img.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_vehicle.xml" value="0.27347836701766315" />
         <entry key="app/src/main/res/menu/menuapp.xml" value="0.30625" />
       </map>
     </option>

@@ -35,7 +35,7 @@ class NotificationSoatTecnicoImpue : AppCompatActivity() {
             datePickerDialog.show()
         }
 
-        val documento:String = intent.getStringExtra("tipo").toString()
+        val documento:String = intent.getStringExtra("documento").toString()
 
         when (documento) {
             "impuestos" -> binding.textView8.text = "Fecha de vencimiento de los impuestos"

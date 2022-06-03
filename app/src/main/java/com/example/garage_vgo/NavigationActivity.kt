@@ -1,10 +1,10 @@
 package com.example.garage_vgo
 
 import android.content.Context
+import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.Menu
-import android.view.MenuInflater
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -61,8 +61,10 @@ class NavigationActivity : AppCompatActivity(){
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if(item.itemId == R.id.itemOne)
-            Toast.makeText(this,"ITEM ONE", Toast.LENGTH_LONG).show()
+        if(item.itemId == R.id.settings) {
+            val addImage = Intent(this, SettingsActivity::class.java)
+            startActivity(addImage)
+        }
         return super.onOptionsItemSelected(item)
     }
 
