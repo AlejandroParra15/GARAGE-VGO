@@ -139,13 +139,12 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="6dp"
-            android:background="@drawable/button_black_background"
+            android:background="#000000"
             android:text="Logout"
             android:textAllCaps="false"
-            android:textColor="#048BA8"
-            android:textSize="16dp"
+            android:textColor="#FFFFFF"
 
-            />
+            android:textSize="16dp" />
 
         <Button
             android:id="@+id/deleteaccount_btn_profilefragment"
@@ -155,13 +154,11 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="6dp"
-            android:background="@color/purple_200"
             android:text="Delete Account"
             android:textAllCaps="false"
             android:textColor="@android:color/white"
-            android:textSize="16dp"
 
-            />
+            android:textSize="16dp" />
 
 
     </RelativeLayout>
