@@ -4,65 +4,61 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#2C699A">
+    android:background="@drawable/imgregistervehicle">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="20dp"
-        android:background="#2C000000"
+        android:background="#B02C699A"
         app:circularflow_radiusInDP=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/tituloRegisterVehicle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:text="Registra tu vehículo"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout"
-            android:layout_width="298dp"
+            android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginBottom="10dp"
+            android:background="#80000000"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tituloRegisterVehicle">
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tituloRegisterVehicle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="116dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="115dp"
+                android:text="Registra tu vehículo"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/textTypeVehicle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="30dp"
                 android:text="Tipo de vehículo:"
                 android:textColor="#B9E769"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintEnd_toEndOf="@+id/spinnerCarOrMotId"
+                app:layout_constraintStart_toStartOf="@+id/spinnerCarOrMotId"
+                app:layout_constraintTop_toBottomOf="@+id/tituloRegisterVehicle" />
 
             <Spinner
                 android:id="@+id/spinnerCarOrMotId"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginEnd="60dp"
                 android:backgroundTint="#B9E769"
                 android:minHeight="48dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -79,18 +75,23 @@
                 android:text="Documentos:"
                 android:textColor="#B9E769"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/spinnerCarOrMotId"
+                app:layout_constraintStart_toStartOf="@+id/spinnerCarOrMotId"
                 app:layout_constraintTop_toBottomOf="@+id/spinnerCarOrMotId" />
 
             <TextView
                 android:id="@+id/tPropiedadId"
                 android:layout_width="0dp"
                 android:layout_height="39dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="20dp"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="70dp"
+                android:background="#6554478C"
                 android:gravity="center|start"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
                 android:text="Tarjeta de propiedad"
                 android:textColor="#B9E769"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -101,57 +102,63 @@
                 android:id="@+id/TecnicoMecId"
                 android:layout_width="0dp"
                 android:layout_height="39dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="20dp"
+                android:background="#5E000000"
                 android:gravity="center|start"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
                 android:text="Técnico mecánico"
                 android:textColor="#B9E769"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/tPropiedadId"
+                app:layout_constraintStart_toStartOf="@+id/tPropiedadId"
                 app:layout_constraintTop_toBottomOf="@+id/tPropiedadId" />
 
             <TextView
                 android:id="@+id/soatId"
                 android:layout_width="0dp"
                 android:layout_height="39dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="20dp"
+                android:background="#6554478C"
                 android:gravity="center|start"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
                 android:text="SOAT"
                 android:textColor="#B9E769"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/TecnicoMecId"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/TecnicoMecId"
                 app:layout_constraintTop_toBottomOf="@+id/TecnicoMecId" />
 
             <TextView
                 android:id="@+id/otrosImgId"
                 android:layout_width="0dp"
-                android:layout_height="30dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="20dp"
+                android:layout_height="39dp"
+                android:background="#5E000000"
                 android:gravity="center|start"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
                 android:text="Otros"
                 android:textColor="#B9E769"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/soatId"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/soatId"
                 app:layout_constraintTop_toBottomOf="@+id/soatId" />
 
             <TextView
                 android:id="@+id/textKmAceite"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="15dp"
                 android:text="Kilometraje del ultimo cambio de aceite:"
                 android:textColor="#B9E769"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/kmAceiteId"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/kmAceiteId"
                 app:layout_constraintTop_toBottomOf="@+id/otrosImgId" />
 
             <EditText
@@ -163,8 +170,8 @@
                 android:inputType="textPersonName"
                 android:minHeight="48dp"
                 android:textSize="14sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/textDouments"
+                app:layout_constraintStart_toStartOf="@+id/textDouments"
                 app:layout_constraintTop_toBottomOf="@+id/textKmAceite"
                 tools:ignore="SpeakableTextPresentCheck" />
 
@@ -176,20 +183,20 @@
                 android:text="A cuantos km desea cambiar el aceite:"
                 android:textColor="#B9E769"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/spinnerKmCambAceiteId"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/spinnerKmCambAceiteId"
                 app:layout_constraintTop_toBottomOf="@+id/kmAceiteId" />
 
             <Spinner
                 android:id="@+id/spinnerKmCambAceiteId"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#B9E769"
                 android:minHeight="48dp"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/kmAceiteId"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/kmAceiteId"
                 app:layout_constraintTop_toBottomOf="@+id/textkmCambioAceite"
                 tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
@@ -197,13 +204,13 @@
                 android:id="@+id/textPlaca"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="15dp"
                 android:text="Placa:"
                 android:textColor="#B9E769"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/placaId"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/placaId"
                 app:layout_constraintTop_toBottomOf="@+id/spinnerKmCambAceiteId" />
 
             <EditText
@@ -215,8 +222,8 @@
                 android:inputType="textPersonName"
                 android:minHeight="48dp"
                 android:textSize="14sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/spinnerKmCambAceiteId"
+                app:layout_constraintStart_toStartOf="@+id/spinnerKmCambAceiteId"
                 app:layout_constraintTop_toBottomOf="@+id/textPlaca"
                 tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
@@ -224,24 +231,19 @@
                 android:id="@+id/buttonSaveId"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="28dp"
-                android:autoText="false"
+                android:layout_marginTop="30dp"
                 android:backgroundTint="#B9E769"
                 android:elegantTextHeight="false"
-                android:insetTop="2dp"
-                android:insetBottom="10dp"
                 android:text="Guardar"
                 android:textAlignment="center"
                 android:textColor="#173B57"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 app:cornerRadius="10dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/placaId"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/placaId"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintStart_toStartOf="@+id/placaId"
+                app:layout_constraintTop_toBottomOf="@+id/placaId" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
