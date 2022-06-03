@@ -8,13 +8,24 @@
     android:background="@drawable/fondo1"
     tools:context=".ProfileFragment">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#412C699A"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
     <ScrollView
         android:id="@+id/scroll_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="74dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="25dp"
         android:background="#B92C699A"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -80,28 +91,64 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="5dp"
                 android:layout_marginBottom="5dp"
-                android:orientation="horizontal"
-                android:background="@drawable/rectangle_radius_shape">
+                android:background="@drawable/rectangle_radius_shape"
+                android:orientation="horizontal">
 
-                <ImageButton
-                    android:id="@+id/images_grid_view_btn"
-                    style="?android:attr/buttonBarButtonStyle"
-                    android:layout_width="1dp"
-                    android:layout_height="wrap_content"
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:src="@drawable/identificationicon"
-                    tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+                    android:orientation="vertical">
 
-                <ImageButton
-                    android:id="@+id/images_tag_btn"
-                    style="?android:attr/buttonBarButtonStyle"
-                    android:layout_width="1dp"
-                    android:layout_height="wrap_content"
+
+                    <ImageButton
+                        android:id="@+id/images_grid_view_btn"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:src="@drawable/identificationicon"
+                        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="Cédula"
+                        android:textColor="#FFFFFF"
+                        app:layout_constraintTop_toTopOf="@+id/images_grid_view_btn" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:src="@drawable/driverslisenceicon"
-                    tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck">
+                    android:orientation="vertical">
 
-                </ImageButton>
+                    <ImageButton
+                        android:id="@+id/images_tag_btn"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:src="@drawable/driverslisenceicon"
+                        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck">
+
+                    </ImageButton>
+
+                    <TextView
+                        android:id="@+id/textView17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="Lisecia"
+                        android:textColor="#FFFFFF" />
+                </LinearLayout>
 
 
             </LinearLayout>
@@ -114,11 +161,11 @@
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="370dp"
         android:layout_height="333dp"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="25dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginEnd="25dp"
         android:layout_marginBottom="20dp"
-        android:background="#9583E377"
+        android:background="#95000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
