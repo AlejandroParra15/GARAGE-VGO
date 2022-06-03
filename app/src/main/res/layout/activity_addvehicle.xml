@@ -231,7 +231,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:backgroundTint="#B9E769"
-                android:elegantTextHeight="false"
                 android:text="Guardar"
                 android:textAlignment="center"
                 android:textColor="#173B57"

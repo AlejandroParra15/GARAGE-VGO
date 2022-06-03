@@ -4,196 +4,205 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/carmo"
+    android:background="@drawable/imgregister"
     tools:context=".RegisterActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#DC2C699A"
+        android:background="#B02C699A"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#80000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <EditText
+                android:id="@+id/etPasswordRegister"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:backgroundTint="#B9E769"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:textColor="#F8F8F8"
+                app:layout_constraintEnd_toEndOf="@+id/etDate"
+                app:layout_constraintStart_toStartOf="@+id/etDate"
+                app:layout_constraintTop_toBottomOf="@+id/lbPasswordRegister"
+                tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/etDate"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:backgroundTint="#B9E769"
+                android:ems="10"
+                android:focusable="false"
+                android:inputType="textPersonName"
+                android:textColor="#F8F8F8"
+                app:layout_constraintEnd_toEndOf="@+id/etLastName"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/etLastName"
+                app:layout_constraintTop_toBottomOf="@+id/lbDate"
+                tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/lbDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Fecha de nacimiento"
+                android:textColor="#B9E769"
+                android:textStyle="normal"
+                app:layout_constraintStart_toStartOf="@+id/etDate"
+                app:layout_constraintTop_toBottomOf="@+id/etLastName" />
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:backgroundTint="#B9E769"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textColor="#F8F8F8"
+                app:layout_constraintEnd_toEndOf="@+id/etEmailRegister"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/etEmailRegister"
+                app:layout_constraintTop_toBottomOf="@+id/lbName"
+                tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/lbLastName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Apellidos"
+                android:textColor="#B9E769"
+                android:textStyle="normal"
+                app:layout_constraintStart_toStartOf="@+id/etLastName"
+                app:layout_constraintTop_toBottomOf="@+id/etName" />
+
+            <TextView
+                android:id="@+id/lbName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Nombres"
+                android:textColor="#B9E769"
+                android:textStyle="normal"
+                app:layout_constraintStart_toStartOf="@+id/etName"
+                app:layout_constraintTop_toBottomOf="@+id/etEmailRegister" />
+
+            <EditText
+                android:id="@+id/etLastName"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:backgroundTint="#B9E769"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textColor="#F8F8F8"
+                app:layout_constraintEnd_toEndOf="@+id/etName"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/etName"
+                app:layout_constraintTop_toBottomOf="@+id/lbLastName"
+                tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+            <Button
+                android:id="@+id/btCancelRegister"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="41dp"
+                android:backgroundTint="#FBFBFB"
+                android:text="CANCELAR"
+                android:textColor="#173B57"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/btRegister"
+                app:layout_constraintStart_toStartOf="@+id/btRegister"
+                app:layout_constraintTop_toBottomOf="@+id/btRegister" />
+
+            <EditText
+                android:id="@+id/etEmailRegister"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="40dp"
+                android:backgroundTint="#B9E769"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textColor="#F8F8F8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lbEmail"
+                tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/lbTitleRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="Registrar"
+                android:textColor="#FDFDFD"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.139"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/lbPasswordRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Contraseña"
+                android:textColor="#B9E769"
+                android:textStyle="normal"
+                app:layout_constraintStart_toStartOf="@+id/etPasswordRegister"
+                app:layout_constraintTop_toBottomOf="@+id/etDate" />
+
+            <Button
+                android:id="@+id/btRegister"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#B9E769"
+                android:text="ENVIAR"
+                android:textColor="#173B57"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/etPasswordRegister"
+                app:layout_constraintStart_toStartOf="@+id/etPasswordRegister"
+                app:layout_constraintTop_toBottomOf="@+id/etPasswordRegister" />
+
+            <TextView
+                android:id="@+id/lbEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="44dp"
+                android:text="Correo"
+                android:textColor="#B9E769"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="@+id/etEmailRegister"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/etEmailRegister"
+                app:layout_constraintTop_toBottomOf="@+id/lbTitleRegister" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <EditText
-        android:id="@+id/etPasswordRegister"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="5dp"
-        android:backgroundTint="#B9E769"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:textColor="#F8F8F8"
-        app:layout_constraintEnd_toEndOf="@+id/etDate"
-        app:layout_constraintStart_toStartOf="@+id/etDate"
-        app:layout_constraintTop_toBottomOf="@+id/lbPasswordRegister"
-        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
-
-    <EditText
-        android:id="@+id/etDate"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="5dp"
-        android:backgroundTint="#B9E769"
-        android:ems="10"
-        android:focusable="false"
-        android:inputType="textPersonName"
-        android:textColor="#F8F8F8"
-        app:layout_constraintEnd_toEndOf="@+id/etLastName"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/etLastName"
-        app:layout_constraintTop_toBottomOf="@+id/lbDate"
-        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
-
-    <TextView
-        android:id="@+id/lbDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Fecha de nacimiento"
-        android:textColor="#B9E769"
-        android:textStyle="normal"
-        app:layout_constraintStart_toStartOf="@+id/etDate"
-        app:layout_constraintTop_toBottomOf="@+id/etLastName" />
-
-    <TextView
-        android:id="@+id/lbPasswordRegister"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Contraseña"
-        android:textColor="#B9E769"
-        android:textStyle="normal"
-        app:layout_constraintStart_toStartOf="@+id/etPasswordRegister"
-        app:layout_constraintTop_toBottomOf="@+id/etDate" />
-
-    <EditText
-        android:id="@+id/etLastName"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="5dp"
-        android:backgroundTint="#B9E769"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:textColor="#F8F8F8"
-        app:layout_constraintEnd_toEndOf="@+id/etName"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/etName"
-        app:layout_constraintTop_toBottomOf="@+id/lbLastName"
-        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
-
-    <TextView
-        android:id="@+id/lbLastName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Apellidos"
-        android:textColor="#B9E769"
-        android:textStyle="normal"
-        app:layout_constraintStart_toStartOf="@+id/etLastName"
-        app:layout_constraintTop_toBottomOf="@+id/etName" />
-
-    <EditText
-        android:id="@+id/etName"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="5dp"
-        android:backgroundTint="#B9E769"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:textColor="#F8F8F8"
-        app:layout_constraintEnd_toEndOf="@+id/etEmailRegister"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/etEmailRegister"
-        app:layout_constraintTop_toBottomOf="@+id/lbName"
-        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
-
-    <TextView
-        android:id="@+id/lbName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Nombres"
-        android:textColor="#B9E769"
-        android:textStyle="normal"
-        app:layout_constraintStart_toStartOf="@+id/etName"
-        app:layout_constraintTop_toBottomOf="@+id/etEmailRegister" />
-
-    <EditText
-        android:id="@+id/etEmailRegister"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="40dp"
-        android:backgroundTint="#B9E769"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:textColor="#F8F8F8"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lbEmail"
-        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
-
-    <TextView
-        android:id="@+id/lbEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:text="Correo"
-        android:textColor="#B9E769"
-        android:textStyle="normal"
-        app:layout_constraintEnd_toEndOf="@+id/etEmailRegister"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/etEmailRegister"
-        app:layout_constraintTop_toBottomOf="@+id/lbTitleRegister" />
-
-    <TextView
-        android:id="@+id/lbTitleRegister"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="Registrar"
-        android:textColor="#FDFDFD"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.139"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btRegister"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:backgroundTint="#B9E769"
-        android:text="ENVIAR"
-        android:textColor="#173B57"
-        android:textStyle="bold"
-        app:cornerRadius="10dp"
-        app:layout_constraintEnd_toStartOf="@+id/btCancelRegister"
-        app:layout_constraintStart_toStartOf="@+id/etPasswordRegister"
-        app:layout_constraintTop_toBottomOf="@+id/etPasswordRegister" />
-
-    <Button
-        android:id="@+id/btCancelRegister"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:backgroundTint="#54173B57"
-        android:text="CANCELAR"
-        android:textColor="#B9E769"
-        android:textStyle="bold"
-        app:cornerRadius="10dp"
-        app:layout_constraintEnd_toEndOf="@+id/etPasswordRegister"
-        app:layout_constraintStart_toEndOf="@+id/btRegister"
-        app:layout_constraintTop_toBottomOf="@+id/etPasswordRegister" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

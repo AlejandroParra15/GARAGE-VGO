@@ -36,6 +36,7 @@
                 android:text="CANCELAR"
                 android:textColor="#173B57"
                 android:textStyle="bold"
+                app:cornerRadius="10dp"
                 app:layout_constraintEnd_toEndOf="@+id/btEnviarPico"
                 app:layout_constraintStart_toStartOf="@+id/btEnviarPico"
                 app:layout_constraintTop_toBottomOf="@+id/btEnviarPico" />
@@ -49,6 +50,7 @@
                 android:text="ENVIAR"
                 android:textColor="#173B57"
                 android:textStyle="bold"
+                app:cornerRadius="10dp"
                 app:layout_constraintEnd_toEndOf="@+id/checkBox7"
                 app:layout_constraintStart_toStartOf="@+id/textView13"
                 app:layout_constraintTop_toBottomOf="@+id/checkBox7" />

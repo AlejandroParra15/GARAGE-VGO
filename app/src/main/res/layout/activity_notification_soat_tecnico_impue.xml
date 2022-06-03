@@ -101,6 +101,7 @@
                 android:text="CANCELAR"
                 android:textColor="#173B57"
                 android:textStyle="bold"
+                app:cornerRadius="10dp"
                 app:layout_constraintEnd_toEndOf="@+id/btEnviarSoat"
                 app:layout_constraintStart_toStartOf="@+id/btEnviarSoat"
                 app:layout_constraintTop_toBottomOf="@+id/btEnviarSoat" />
@@ -114,6 +115,7 @@
                 android:text="ENVIAR"
                 android:textColor="#173B57"
                 android:textStyle="bold"
+                app:cornerRadius="10dp"
                 app:layout_constraintEnd_toEndOf="@+id/textView9"
                 app:layout_constraintStart_toStartOf="@+id/textView9"
                 app:layout_constraintTop_toBottomOf="@+id/checkBox3" />
