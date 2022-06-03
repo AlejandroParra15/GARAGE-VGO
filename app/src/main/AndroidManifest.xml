@@ -13,6 +13,15 @@
             android:name=".SettingsActivity"
             android:exported="true" />
         <activity
+            android:name=".KilometrajeCambioDeAceite"
+            android:exported="false" />
+        <activity
+            android:name=".NotificationSoatTecnicoImpue"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityNotificationPicoYPlaca"
+            android:exported="false" />
+        <activity
             android:name=".ViewImgActivity"
             android:exported="true" />
         <activity
