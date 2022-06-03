@@ -29,9 +29,9 @@
         android:layout_marginTop="15dp"
         android:text="Seleccione el dia de pico y placa"
         android:textColor="#B9E769"
-        app:layout_constraintEnd_toEndOf="@+id/spinner2"
-        app:layout_constraintStart_toStartOf="@+id/spinner2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintEnd_toEndOf="@+id/spinnerPicoyPlaca"
+        app:layout_constraintStart_toStartOf="@+id/spinnerPicoyPlaca"
+        app:layout_constraintTop_toBottomOf="@+id/etCiudad" />
 
     <TextView
         android:id="@+id/textView15"
@@ -40,22 +40,22 @@
         android:layout_marginTop="15dp"
         android:text="Seleccione el vehiculo"
         android:textColor="#B9E769"
-        app:layout_constraintEnd_toEndOf="@+id/spinner3"
-        app:layout_constraintStart_toStartOf="@+id/spinner3"
-        app:layout_constraintTop_toBottomOf="@+id/spinner2" />
+        app:layout_constraintEnd_toEndOf="@+id/spinnerVehiculoPico"
+        app:layout_constraintStart_toStartOf="@+id/spinnerVehiculoPico"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerPicoyPlaca" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/etCiudad"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:backgroundTint="#B9E769"
         android:ems="10"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        android:text="Cali"
         app:layout_constraintEnd_toEndOf="@+id/textView10"
         app:layout_constraintStart_toStartOf="@+id/textView10"
-        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+        app:layout_constraintTop_toBottomOf="@+id/textView14"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/textView14"
@@ -64,33 +64,33 @@
         android:layout_marginTop="32dp"
         android:text="Ciudad"
         android:textColor="#B9E769"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/etCiudad"
+        app:layout_constraintStart_toStartOf="@+id/etCiudad"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <Spinner
-        android:id="@+id/spinner2"
+        android:id="@+id/spinnerPicoyPlaca"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:backgroundTint="#B9E769"
         android:minWidth="30dp"
         android:minHeight="48dp"
         android:textAlignment="textStart"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/etCiudad"
+        app:layout_constraintStart_toStartOf="@+id/etCiudad"
         app:layout_constraintTop_toBottomOf="@+id/textView11"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <Spinner
-        android:id="@+id/spinner3"
+        android:id="@+id/spinnerVehiculoPico"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:backgroundTint="#B9E769"
         android:minWidth="30dp"
         android:minHeight="48dp"
         android:textAlignment="textStart"
-        app:layout_constraintEnd_toEndOf="@+id/spinner2"
-        app:layout_constraintStart_toStartOf="@+id/spinner2"
+        app:layout_constraintEnd_toEndOf="@+id/spinnerPicoyPlaca"
+        app:layout_constraintStart_toStartOf="@+id/spinnerPicoyPlaca"
         app:layout_constraintTop_toBottomOf="@+id/textView15"
         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -103,7 +103,7 @@
         android:textColor="#B9E769"
         app:layout_constraintEnd_toEndOf="@+id/checkBox4"
         app:layout_constraintStart_toStartOf="@+id/checkBox4"
-        app:layout_constraintTop_toBottomOf="@+id/spinner3" />
+        app:layout_constraintTop_toBottomOf="@+id/spinnerVehiculoPico" />
 
     <CheckBox
         android:id="@+id/checkBox4"
@@ -113,8 +113,8 @@
         android:buttonTint="#B9E769"
         android:text="1 mes antes de la fecha"
         android:textColor="#EFEDED"
-        app:layout_constraintEnd_toEndOf="@+id/spinner3"
-        app:layout_constraintStart_toStartOf="@+id/spinner3"
+        app:layout_constraintEnd_toEndOf="@+id/spinnerVehiculoPico"
+        app:layout_constraintStart_toStartOf="@+id/spinnerVehiculoPico"
         app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
     <CheckBox
@@ -151,7 +151,7 @@
         app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btEnviarPico"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -160,12 +160,12 @@
         android:text="ENVIAR"
         android:textColor="#173B57"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/button4"
+        app:layout_constraintEnd_toStartOf="@+id/btCancelarPico"
         app:layout_constraintStart_toStartOf="@+id/checkBox7"
         app:layout_constraintTop_toBottomOf="@+id/checkBox7" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btCancelarPico"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -177,7 +177,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/checkBox7"
-        app:layout_constraintStart_toEndOf="@+id/button3"
-        app:layout_constraintTop_toTopOf="@+id/button3"
+        app:layout_constraintStart_toEndOf="@+id/btEnviarPico"
+        app:layout_constraintTop_toTopOf="@+id/btEnviarPico"
         app:layout_constraintVertical_bias="0.289" />
 </androidx.constraintlayout.widget.ConstraintLayout>
